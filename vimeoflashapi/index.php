@@ -16,8 +16,8 @@
 	<button id="pauseButton">Pause</button>
 	<button id="unloadButton">Unload</button>
 
-	<dl>
-    	<dt>Console</dt>
+	<dl class="console">
+    	<dt>Play Progress</dt>
         	<dd><textarea class="output" readonly="readonly">player_1 ready!</textarea></dd>
     </dl>
 </body>

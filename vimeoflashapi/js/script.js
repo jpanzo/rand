@@ -36,6 +36,16 @@ $(document).ready(
 		//http://vimeo.com/api/docs/player-js#reference
 		$f(playerID).api('play');
 		
+		apiConsole.html('hello world!');
+		
+		function apiLog(message) {
+		apiConsole.html(message + '\n' + apiConsole.html());
+		}
+		
+		
+		$f(playerID).addEvent('playProgress', function(data) {
+			apiLog('playProgress event: ' + data.seconds + ' : ' + data.percent + ' : ' + data.duration);
+		});
 
 	}
 	
@@ -46,9 +56,7 @@ $(document).ready(
 		alert('Seeking');
 	}
 	
-	function apiLog(message) {
-		apiConsole.innerHTML = message + '\n' + apiConsole.innerHTML;
-	}
+	
 	
 });
 /**
