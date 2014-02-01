@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="height:100%;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body style="border-style:solid; border-color:black; width:90%; " >
+<p>body style has been set to border-style:solid; border-color:black; width:90%;</p>
+<p id="body">This will display the body height and width</p>
+<div style="border-style:solid; border-color:blue; width:90%; ">
+<p>div style has been set to border-style:solid; border-color:blue; width:90%;</p>
+<p id="div">This will display the div height and width</p>
+<p id="window">This will display the window height and width</p>
+</div>
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(window).resize(function() {
+	//get window dimenserions
+	var windowheight = $(window).height();
+	var windowwidth = $(window).width();
+	
+	//get body dimenserions
+	var bodyheight = $("body").width();
+	var bodywidth = $("body").width();
+	
+	//get div dimenserions
+	var divheight = $("div").width();
+	var divwidth = $("div").width();
+	
+	
+	$("#body").html("The body's height is " + String(bodyheight) + " pixels and the body's width is " + String(bodywidth) + " pixels.");
+	$("#div").html("The div's height is " + String(divheight) + " pixels and the div's width is " + String(divwidth) + " pixels.");
+	$("#window").html("The window's height is " + String(windowheight) + " pixels and the window's width is " + String(windowwidth) + " pixels.");
+}) // end of .resize(function () {
+
+
+</script>
+
+</html>
